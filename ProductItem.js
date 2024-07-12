@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useCart } from './CartContext';
 
 const { width } = Dimensions.get('window');
-const itemWidth = (width - 30) / 2; // 30 is the total horizontal padding
+const itemWidth = (width - 30) / 2; 
 
 function ProductItem({ product, onPress, style }) {
   const { addToCart } = useCart();
@@ -22,7 +22,7 @@ function ProductItem({ product, onPress, style }) {
         <Text style={styles.price}>${product.price.toFixed(2)}</Text>
       </View>
       <TouchableOpacity style={styles.addToCartButton} onPress={handleAddToCart}>
-        <Ionicons name="bag-add-outline" size={24} color="white" />
+        <Ionicons name="cart-outline" size={24} color="black" />
       </TouchableOpacity>
     </TouchableOpacity>
   );
@@ -35,11 +35,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     overflow: 'hidden',
     marginBottom: 10,
-    elevation: 3,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
+    borderWidth: 1,
+    borderColor: 'black',
+    padding: 10,
   },
   image: {
     width: '100%',
@@ -54,7 +52,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 5,
-    color: '#333', // Ensure text color contrasts with background
+    color: '#333', 
   },
   description: {
     fontSize: 14,
@@ -70,7 +68,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     right: 10,
-    backgroundColor: '#dd8560',
     borderRadius: 20,
     padding: 5,
   },

@@ -12,8 +12,7 @@ function ProductDetailsScreen({ route }) {
         
         <Text style={styles.description}>{product.description}</Text>
         <Text style={styles.price}>${product.price.toFixed(2)}</Text>
-        <Image source={require('./1.png')} style={styles.secSect}/>
-        <Image source={require('./2.png')} style={styles.lastSect}/>
+  
       </View>
     </ScrollView>
   );

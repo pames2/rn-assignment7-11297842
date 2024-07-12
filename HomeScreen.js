@@ -110,8 +110,8 @@ const styles = StyleSheet.create({
   },
   ourStory: {
     fontSize: 24,
-    fontWeight: 'bold',
     marginBottom: 10,
+  marginLeft: 10,
   },
 });
 

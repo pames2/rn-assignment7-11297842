@@ -30,7 +30,7 @@ function CartScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={{ fontSize: 24, fontWeight: 'bold', marginBottom: 20, alignSelf: 'center', textDecorationLine: 'underline', textDecorationColor: 'grey'}}>CHECKOUT</Text>
+      <Text style={{ fontSize: 24, marginBottom: 20, alignSelf: 'center',  color: 'grey', marginTop: 100}}>CHECKOUT</Text>
       <FlatList
         data={cart}
         renderItem={({ item }) => (
@@ -39,8 +39,7 @@ function CartScreen() {
         keyExtractor={(item) => item.id.toString()}
         ListEmptyComponent={
           <View style={styles.emptyCart}>
-            <Ionicons name="cart-outline" size={48} color="#ccc" />
-            <Text style={styles.emptyCartText}>Your cart is empty</Text>
+            <Text style={styles.emptyCartText}>Empty</Text>
           </View>
         }
       />
